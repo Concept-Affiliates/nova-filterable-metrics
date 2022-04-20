@@ -37,7 +37,7 @@ trait Filterable
      *
      * @return array
      */
-    public function jsonSerialize(): array
+    public function jsonSerialize()
     {
         return array_merge(parent::jsonSerialize(), [
             'filters' => collect($this->filters() ?? [])->map(function ($filter) {
